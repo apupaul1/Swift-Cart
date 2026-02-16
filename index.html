@@ -11,6 +11,11 @@
       rel="stylesheet"
       type="text/css"
     />
+
+    <script
+      src="https://kit.fontawesome.com/d7638ac396.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -30,7 +35,7 @@
         <div class="navbar-end">
           <div class="flex-none">
             <div class="dropdown dropdown-end">
-              <div tabindex="0" role="button" class="btn btn-ghost ">
+              <div tabindex="0" role="button" class="btn btn-ghost">
                 <div class="indicator">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +51,9 @@
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
-                  <span class="badge badge-sm indicator-item font-open-sans">0</span>
+                  <span class="badge badge-sm indicator-item font-open-sans"
+                    >0</span
+                  >
                 </div>
               </div>
               <div
@@ -93,8 +100,110 @@
         </div>
       </div>
     </header>
+
     <main>
-        <h1>Home</h1>
+      <!-- Hero Layout -->
+      <section>
+        <div
+          class="hero h-[520px]"
+          style="background-image: url(./assets/banner-image.png)"
+        >
+          <div class="hero-overlay"></div>
+          <div class="hero-content text-neutral-content text-left lg:mr-90">
+            <div>
+              <h1 class="mb-5 text-5xl font-extrabold font-marcellus">
+                Best Collection For You
+              </h1>
+              <p class="mb-5 w-2/3">
+                Discover the latest trends in fashion,electronics,and more. Shop
+                with confidence and style at SwiftCart
+              </p>
+              <button class="btn btn-primary font-marcellus font-bold">
+                Shop Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-12 bg-base-200 font-open-sans">
+        <div class="w-10/12 mx-auto">
+          <div class="text-center">
+            <h1 class="text-3xl font-bold mb-3">Why Choose Us</h1>
+            <p class="text-gray-600">
+              We provide the best shopping experience with top-notch services.
+            </p>
+          </div>
+          <!-- Card Section -->
+          <div class="flex gap-10 mt-10">
+            <!-- Card-1 -->
+            <div
+              class="bg-base-100 py-8 px-5 rounded-lg shadow-md flex-1 hover:transition hover:scale-105 hover:ease-linear"
+            >
+              <i
+                class="fa-solid fa-truck-fast fa-2xl bg-blue-100 px-2 py-6 rounded-lg shadow-lg"
+              ></i>
+              <h1 class="text-lg font-bold my-4 text-gray-700">
+                Fast Delivery
+              </h1>
+              <p class="text-gray-500 text-sm">
+                Get your orders delivered to your doorstep quickly and
+                efficiently.
+              </p>
+            </div>
+            <!-- Card-2 -->
+            <div
+              class="bg-base-100 py-8 px-5 rounded-lg shadow-md flex-1 hover:transition hover:scale-105 hover:ease-linear"
+            >
+              <i
+                class="fa-solid fa-headset fa-2xl bg-blue-100 px-2 py-6 rounded-lg shadow-lg"
+              ></i>
+              <h1 class="text-lg font-bold my-4 text-gray-700">24/7 Support</h1>
+              <p class="text-gray-500 text-sm">
+                Our support team is available around the clock 10 assist you.
+              </p>
+            </div>
+            <!-- Card-3 -->
+            <div
+              class="bg-base-100 py-8 px-5 rounded-lg shadow-md flex-1 hover:transition hover:scale-105 hover:ease-linear"
+            >
+              <i
+                class="fa-solid fa-shield fa-2xl bg-blue-100 px-2 py-6 rounded-lg shadow-lg"
+              ></i>
+              <h1 class="text-lg font-bold my-4 text-gray-700">
+                Secure Payment
+              </h1>
+              <p class="text-gray-500 text-sm">
+                Experience safe and secure transactions with our encrypted
+                payment systems.
+              </p>
+            </div>
+            <!-- Card-4 -->
+            <div
+              class="bg-base-100 py-8 px-5 rounded-lg shadow-md flex-1 hover:transition hover:scale-105 hover:ease-linear"
+            >
+              <i
+                class="fa-solid fa-clock-rotate-left fa-2xl bg-blue-100 px-2 py-6 rounded-lg shadow-lg"
+              ></i>
+              <h1 class="text-lg font-bold my-4 text-gray-700">Easy Returns</h1>
+              <p class="text-gray-500 text-sm">
+                Not satisfied? Return your products easily within 30 days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending Now -->
+      <section class="py-10 font-open-sans">
+        <div class="w-10/12 mx-auto">
+          <h1 class="text-center text-3xl font-bold">Trending Now</h1>
+          <div id="trending-container" class="flex gap-10 mt-8">
+            
+          </div>
+        </div>
+      </section>
     </main>
     <footer></footer>
 
