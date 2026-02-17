@@ -1,24 +1,24 @@
 ## 1) What is the difference between null and undefined?
 **Answer:**  
-Null means there is no value, and undefined means a variable is declared but not assigned any value.
+Null বোঝায় যে কোনো value নেই (ইচ্ছাকৃতভাবে empty রাখা হয়েছে), আর undefined বোঝায় variable declare করা হয়েছে কিন্তু কোনো value assign করা হয়নি।
 
 ## 2) What is the use of the map() function in JavaScript? How is it different from forEach()?
 **Answer:**  
-The map() function is used when we do not need to change the original array. The forEach() function returns nothing, but the map() function returns a new array.
+map() function ব্যবহার করা হয় যখন আমরা original array পরিবর্তন না করে একটি নতুন array তৈরি করতে চাই। forEach() function কোনো কিছু return করে না, কিন্তু map() function একটি নতুন array return করে।
 
 ## 3) What is the difference between == and ===?
 **Answer:**  
-The difference between == and === is that '==' only checks the value, whereas '===' checks both the value and its type.
+'==' শুধুমাত্র value compare করে, কিন্তু '===' value এবং type দুটোই compare করে।
 
 ## 4) What is the significance of async/await in fetching API data?
 **Answer:**  
-It removes chaining like regular fetch and allows the program to wait for the API response, ensuring other operations run in the correct order.
+এটি regular fetch এর মতো chaining কমায় এবং program-কে API response এর জন্য wait করতে দেয়, যাতে operations সঠিক order-এ execute হয়।
 
 ## 5) Explain the concept of Scope in JavaScript (Global, Function, Block)
 **Answer:**  
 
-**Global Scope** - Variables declared outside any function can be accessed anywhere in the program.  
+**Global Scope** - যেসব variable কোনো function এর বাইরে declare করা হয়, সেগুলো program এর যেকোনো জায়গা থেকে access করা যায়।  
 
-**Function Scope** - Variables declared inside a function can only be accessed inside that function.  
+**Function Scope** - যেসব variable function এর ভিতরে declare করা হয়, সেগুলো শুধুমাত্র ওই function এর ভিতরেই access করা যায়।  
 
-**Block Scope** - Variables declared inside a block can only be accessed inside that block.
+**Block Scope** - যেসব variable কোনো block {} এর ভিতরে declare করা হয়, সেগুলো শুধুমাত্র ওই block এর ভিতরেই access করা যায়।
