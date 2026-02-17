@@ -26,7 +26,7 @@ const displayTrendingProduct = (products) => {
   for (let product of products) {
     const div = document.createElement("div");
 
-    div.classList.add('flex-1')
+    div.classList.add("flex-1");
 
     div.innerHTML = `
     <div class="card bg-base-100 shadow-sm h-full">
@@ -47,7 +47,7 @@ const displayTrendingProduct = (products) => {
     <h2 class="font-bold">${product.title}</h2>
     <p class="font-bold">$${product.price}</p>
     <div class="flex justify-between gap-10">
-     <button class="btn btn-outline  shadow-md btn-sm flex-1"><i class="fa-solid fa-eye"></i>Details</button>
+     <button onclick="loadProductDetails(${product.id})" class="btn btn-outline  shadow-md btn-sm flex-1"><i class="fa-solid fa-eye"></i>Details</button>
       <button class="btn btn-primary btn-sm flex-1"><i class="fa-solid fa-cart-arrow-down"></i>Add</button>
     </div>
   </div>
@@ -58,6 +58,52 @@ const displayTrendingProduct = (products) => {
 
     container.appendChild(div);
   }
+};
+
+const loadProductDetails = (id) => {
+  const url = `https://fakestoreapi.com/products/${id}`;
+
+  fetch(url)
+    .then((res) => res.json())
+    .then((result) => displayProductDetails(result));
+};
+
+const displayProductDetails = (product) => {
+  const detailsContainer = document.getElementById("details-container");
+  detailsContainer.innerHTML = `
+        <div class="flex flex-col md:flex-row gap-5 bg-base-100">
+          <figure class="p-20 md:p-12 bg-base-300 lg:flex-1">
+            <img
+              src=${product.image}
+              alt="Movie"
+            />
+          </figure>
+          <div class="lg:flex-2">
+            <div>
+              <h2 class="text-md md:text-2xl font-bold mb-2">
+                ${product.title}
+              </h2>
+              <p class="badge badge-outline badge-info text-sm">men's clothing</p>
+              <p class="mt-3">
+                <span><i class="fa-solid fa-star" style="color: rgba(255, 212, 59, 1);"></i>${product.rating.rate} (${product.rating.count} Review)</span>
+              </p>
+            </div>
+            <div>
+              <h1 class="text-2xl my-4 font-bold">$${product.price}</h1>
+              <p class="text-gray-500 mb-4 text-sm">${product.description}</p>
+            </div>
+            <div class="flex gap-8">
+              <button class="btn btn-outline btn-sm btn-neutral flex-1">
+                Buy Now
+              </button>
+              <button class="btn btn-primary btn-sm flex-1">
+                <i class="fa-solid fa-cart-arrow-down"></i>Add
+              </button>
+            </div>
+          </div>
+        </div>
+  `;
+  document.getElementById("product_details").showModal();
 };
 
 loadTrendingProduct();

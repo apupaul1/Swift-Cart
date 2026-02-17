@@ -147,4 +147,3 @@ const displayProductDetails = (product) => {
 };
 
 loadCategory();
-loadProduct();
