@@ -1,7 +1,10 @@
-document.getElementById("redirect").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.location.href = "products.html";
-});
+const redirect = document.getElementsByClassName("redirect");
+for (let re of redirect) {
+  re.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.location.href = "products.html";
+  });
+}
 
 const loadTrendingProduct = () => {
   fetch("https://fakestoreapi.com/products")
@@ -23,11 +26,11 @@ const displayTrendingProduct = (products) => {
   for (let product of products) {
     const div = document.createElement("div");
 
-    console.log(div);
+    div.classList.add('flex-1')
 
     div.innerHTML = `
     <div class="card bg-base-100 shadow-sm h-full">
-  <figure class="bg-base-300 p-32 w-100 h-40">
+  <figure class="bg-base-300 p-30 md:p-32 h-60">
     <img
     class=""
       src=${product.image}
